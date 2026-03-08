@@ -1,0 +1,67 @@
+[package]
+name = "tpl-stake-pool"
+version = "2.0.3"
+description = "Trezoa Program Library Stake Pool"
+homepage = "https://www.trezoa-program.com/docs/stake-pool"
+authors = ["Trezoa-team Maintainers <maintainers@trezoa.xyz>"]
+repository = "https://github.com/trezoa-program/stake-pool"
+license = "Apache-2.0"
+edition = "2021"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+arrayref = "0.3.9"
+borsh = "1.6.0"
+bytemuck = "1.25"
+num-derive = "0.4"
+num-traits = "0.2"
+num_enum = "0.7.4"
+serde = "1.0.219"
+serde_derive = "1.0.103"
+trezoa-account-info = "3.0.0"
+trezoa-borsh = "3.0.1"
+trezoa-clock = "3.0.1"
+trezoa-cpi = "3.0.0"
+trezoa-epoch-rewards = "3.0.1"
+trezoa-instruction = { version = "3.2.0", features = ["std"] }
+trezoa-msg = "3.1.0"
+trezoa-program-entrypoint = "3.0.0"
+trezoa-program-error = "3.0.0"
+trezoa-program-memory = "3.0.0"
+trezoa-program-pack = "3.1.0"
+trezoa-pubkey = { version = "4.1.0", features = ["curve25519"] }
+trezoa-rent = "4.1.0"
+trezoa-sdk-ids = "3.1.0"
+trezoa-security-txt = "1.1.2"
+trezoa-stake-interface = { version = "2.0.0", features = ["bincode", "borsh"] }
+trezoa-sysvar-id = "3.0.0"
+trezoa-sysvar = { version = "4.0.0", features = ["bincode"] }
+trezoa-system-interface = { version = "3.1.0", features = ["bincode"] }
+tpl-pod = { version = "0.7.2", features = [
+  "borsh",
+] }
+tpl-token-2022-interface = "2.1.0"
+thiserror = "2.0"
+bincode = "1.3.1"
+
+[dev-dependencies]
+trezoa-feature-set = "3.1.8"
+assert_matches = "1.5.0"
+proptest = "1.10"
+trezoa-account = { version = "3.0.0", features = ["bincode"] }
+trezoa-compute-budget-interface = "3.0.0"
+trezoa-native-token = "3.0.0"
+trezoa-program = "4.0.0"
+trezoa-program-test = { version = "3.1.8", features = ["trezoa-unstable-api"] }
+trezoa-sdk = "3.0.0"
+trezoa-vote-interface = { version = "5.1.1", features = ["bincode"] }
+tpl-token-interface = "2.0.0"
+test-case = "3.3"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[lints]
+workspace = true

@@ -1,0 +1,41 @@
+[package]
+name = "tpl-stake-pool-cli"
+version = "2.0.1"
+description = "TPL-Stake-Pool Command-line Utility"
+homepage = "https://www.trezoa-program.com/docs/stake-pool"
+authors = ["Trezoa-team Maintainers <maintainers@trezoa.xyz>"]
+repository = "https://github.com/trezoa-program/stake-pool"
+license = "Apache-2.0"
+edition = "2021"
+
+[dependencies]
+clap = "2.33.3"
+serde = "1.0.219"
+trezoa-account-decoder = "3.0.0"
+trezoa-clap-utils = "3.0.0"
+trezoa-cli-config = "3.0.0"
+trezoa-cli-output = { version = "3.0.0", features = ["trezoa-unstable-api"] }
+trezoa-client = "3.0.0"
+trezoa-compute-budget-interface = "3.0.0"
+trezoa-commitment-config = "3.1.1"
+trezoa-logger = "3.0.0"
+trezoa-message = "3.0.0"
+trezoa-program = "4.0.0"
+trezoa-remote-wallet = "3.0.0"
+trezoa-sdk = "3.0.0"
+trezoa-stake-interface = { version = "2", features = ["bincode"] }
+trezoa-system-interface = { version = "3", features = ["bincode"] }
+tpl-associated-token-account-interface = "2.0.0"
+tpl-stake-pool = { version = "=2.0.3", path = "../../program", features = [
+  "no-entrypoint",
+] }
+tpl-token-interface = "2.0"
+tpl-token = { version = "9.0", features = [
+  "no-entrypoint",
+] }
+tpl-token-2022-interface = "2.0"
+bincode = "1.3.1"
+
+[[bin]]
+name = "tpl-stake-pool"
+path = "src/main.rs"

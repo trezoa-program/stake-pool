@@ -1,0 +1,93 @@
+{
+  "name": "@trezoa/tpl-stake-pool",
+  "version": "1.1.8",
+  "description": "TPL Stake Pool Program JS API",
+  "scripts": {
+    "build": "tsc && cross-env NODE_ENV=production rollup -c",
+    "build:program": "cargo build-sbf --manifest-path=../program/Cargo.toml",
+    "format": "prettier --check src test",
+    "format:fix": "prettier --write src test",
+    "lint": "eslint --max-warnings 0 .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "clean": "rimraf ./dist"
+  },
+  "keywords": [],
+  "contributors": [
+    "Trezoa-team Maintainers <maintainers@trezoa.xyz>",
+    "Lieu Zheng Hong",
+    "mFactory Team (https://mfactory.ch/)",
+    "SolBlaze <contact@solblaze.org> (https://solblaze.org/)"
+  ],
+  "homepage": "https://trezoa.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trzledgerfoundation/trezoa-program-library"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "browser": {
+    "./dist/index.cjs.js": "./dist/index.browser.cjs.js",
+    "./dist/index.esm.js": "./dist/index.browser.esm.js"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@trezoa/buffer-layout": "^4.0.1",
+    "@trezoa/tpl-token": "0.4.14",
+    "@trezoa/web3.js": "^1.98.4",
+    "bn.js": "^5.2.2",
+    "buffer": "^6.0.3",
+    "buffer-layout": "^1.2.2",
+    "superstruct": "^2.0.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^6.0.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-multi-entry": "^7.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/bn.js": "^5.2.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.0",
+    "@types/node-fetch": "^2.6.13",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.48.1",
+    "cross-env": "^10.0.0",
+    "eslint": "^8.57.1",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.53.3",
+    "rollup-plugin-dts": "^6.2.1",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.9.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testRegex": ".*\\.test\\.ts$",
+    "testEnvironment": "node"
+  }
+}
