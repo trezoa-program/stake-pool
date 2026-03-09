@@ -47,7 +47,7 @@
   "dependencies": {
     "@trezoa/buffer-layout": "^4.0.1",
     "@trezoa/tpl-token": "0.4.14",
-    "@trezoa/web3.js": "^1.98.4",
+    "@trezoa/web3.js": "^1.98.8",
     "bn.js": "^5.2.2",
     "buffer": "^6.0.3",
     "buffer-layout": "^1.2.2",
