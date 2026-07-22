@@ -1,5 +1,5 @@
 anyio==4.14.2
-certifi==2026.6.17
+certifi==2026.7.22
 construct==2.10.70
 construct-typing==0.8.0
 h11==0.16.0
