@@ -66,7 +66,7 @@
     "@types/node": "^26.2.0",
     "@types/node-fetch": "^2.6.13",
     "@typescript-eslint/eslint-plugin": "^8.66.0",
-    "@typescript-eslint/parser": "^8.66.0",
+    "@typescript-eslint/parser": "^8.67.0",
     "cross-env": "^10.0.0",
     "eslint": "^10.8.1",
     "jest": "^30.4.2",
