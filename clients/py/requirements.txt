@@ -1,4 +1,4 @@
-anyio==4.15.1
+anyio==4.16.0
 certifi==2026.10.23
 construct==2.10.70
 construct-typing==0.8.1
